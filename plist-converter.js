@@ -85,7 +85,7 @@ async function convertPlist(plistPath, outputPath) {
 		// wait until we're ready to write files to create the folder for easier re-runnning on errors
 		fs.mkdirSync(fullOutputFolderPath);
 	}
-	fs.writeFileSync(path.join(fullOutputFolderPath, "data.json"), JSON.stringify(dictionaryJsonToSave, null, "\t"), { encoding: "utf8" });
+	fs.writeFileSync(path.join(fullOutputFolderPath, "animation.json"), JSON.stringify(dictionaryJsonToSave, null, "\t"), { encoding: "utf8" });
 
 	console.log("Wrote files to", fullOutputFolderPath);
 }
